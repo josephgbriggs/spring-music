@@ -22,7 +22,8 @@ pipeline {
 		    target: 'https://apps.dev.cfdev.sh/',
 		    organization: 'cfdev-org',
 		    cloudSpace: 'cfdev-space',
-		    credentialsId: 'user'
+		    credentialsId: 'user',
+			selfSigned: true
 		  )
 	  }
 	}
