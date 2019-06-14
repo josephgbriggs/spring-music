@@ -23,7 +23,7 @@ pipeline {
 		    organization: 'cfdev-org',
 		    cloudSpace: 'cfdev-space',
 		    credentialsId: 'user',
-			selfSigned: true
+			selfSigned: 'true'
 		  )
 	  }
 	}
