@@ -19,7 +19,7 @@ pipeline {
 	stage('Deploy') {
 	  steps {
 		  pushToCloudFoundry(
-		    target: 'https://apps.dev.cfdev.sh/',
+		    target: 'https://api.dev.cfdev.sh',
 		    organization: 'cfdev-org',
 		    cloudSpace: 'cfdev-space',
 		    credentialsId: 'cf-api-user',
