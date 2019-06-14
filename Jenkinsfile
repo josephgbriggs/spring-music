@@ -22,7 +22,7 @@ pipeline {
 		    target: 'https://apps.dev.cfdev.sh/',
 		    organization: 'cfdev-org',
 		    cloudSpace: 'cfdev-space',
-		    credentialsId: 'global-domain-global-scope-cf-api-user',
+		    credentialsId: 'cf-api-user',
 			selfSigned: 'true'
 		  )
 	  }
