@@ -1,19 +1,25 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
+    stage('Clone') {
       steps {
+		  echo 'Cloning...'
         git(url: 'https://github.com/josephgbriggs/spring-music.git', branch: 'master')
       }
     }
 	stage('Build') {
 	  steps {
-	    echo 'Building..'
+	    echo 'Building...'
+		if (isUnix()) {
+		  sh './gradlew assemble'
+		} else {
+		  bat 'gradlew.bat assemble'
+		}
 	  }
 	}
 	stage('Test') {
 	  steps {
-	    echo 'Testing..'
+	    echo 'Testing...'
 	  }
 	}
 	stage('Deploy') {
