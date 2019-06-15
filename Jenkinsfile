@@ -10,7 +10,7 @@ pipeline {
 	stage('Build') {
 	  steps {
 	    echo 'Building...'
-		sh './gradlew assemble'
+		sh 'gradle wrapper --gradle-version=5.1.1 assemble'
 	  }
 	}
 	stage('Test') {
