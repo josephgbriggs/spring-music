@@ -26,6 +26,7 @@ pipeline {
 		    cloudSpace: 'cfdev-space',
 		    credentialsId: 'cf-api-user',
 			selfSigned: 'true'
+			pluginTimeout: '120'
 		  )
 	  }
 	}
