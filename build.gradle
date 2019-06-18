@@ -68,7 +68,7 @@ dependencies {
     testCompile "org.springframework.boot:spring-boot-starter-test"
 }
 
-jar {
+bootJar {
     baseName = "spring-music"
     version = "" // omit the version from the war file name
 }
